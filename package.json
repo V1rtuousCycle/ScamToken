@@ -52,6 +52,7 @@
   "dependencies": {
     "canonical-weth": "^1.0.0",
     "dotenv": "^2.0.0",
+    "openzeppelin-solidity": "1.10.0",
     "react": "^15.4.2",
     "react-dom": "^15.4.2"
   },
@@ -99,5 +100,21 @@
   },
   "eslintConfig": {
     "extends": "react-app"
-  }
+  },
+  "main": "truffle-config.js",
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/InfiniteStyles/ScamToken-ICO.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/InfiniteStyles/ScamToken-ICO/issues"
+  },
+  "homepage": "https://github.com/InfiniteStyles/ScamToken-ICO#readme",
+  "description": ""
 }
