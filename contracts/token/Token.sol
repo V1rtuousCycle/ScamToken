@@ -34,5 +34,5 @@ interface Token {
     function allowance(address _owner, address _spender) external view returns (uint256 remaining);
 
     /// @return the total amount of tokens
-    function totalSupply() external view returns (uint256 supply);
+    function totalSupply() external view returns (uint256);
 }

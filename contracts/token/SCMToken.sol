@@ -17,11 +17,11 @@ contract SCMToken is StandardToken {
     {
         owner = msg.sender;
         balances[0x486156834261013e9a4f417c9f637fa983ea4026] = 10000; // Give the creator all the initial tokens
-        totalSupply = 10000; // Update the total supply
+        totalTokens = 10000; // Update the total supply
         name = 'Scam'; // Set the token name for display purposes
         decimals = 18; // The amount of decimal units
         symbol = 'SCM'; // Set the symbol 
-        emit Transfer(address(0), 0x486156834261013e9a4f417c9f637fa983ea4026, totalSupply);
+        emit Transfer(address(0), 0x486156834261013e9a4f417c9f637fa983ea4026, totalTokens);
     }
 
     /* Approves and then calls the receiving contract */

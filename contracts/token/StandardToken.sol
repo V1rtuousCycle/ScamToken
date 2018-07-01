@@ -12,7 +12,8 @@ contract StandardToken is Token {
     mapping (address => mapping(address => uint256)) allowed;
     // a change in the ERC20 protocol to create an unlimited allowance
     uint constant MAX_UINT = 2**256 - 1;
-    uint256 public totalSupply;
+    uint256 public totalTokens;
+    
 
     function transfer(address _to, uint256 _value) public returns (bool success) {
         // Default assumes totalSupply can't be over max (2^256 - 1)
@@ -57,7 +58,7 @@ contract StandardToken is Token {
         return allowed[_owner][_spender];
     }
 
-    function totalSupply() public view returns(uint256 supply) {
-        supply = totalSupply;
+    function totalSupply() public view returns(uint256) {
+        return totalTokens;
     }
 }
