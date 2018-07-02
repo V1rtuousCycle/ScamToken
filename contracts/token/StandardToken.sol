@@ -1,7 +1,7 @@
 pragma solidity ^0.4.4;
 
 import "./Token.sol";
-import "./lib/SafeMath.sol";
+import "../lib/SafeMath.sol";
 
 contract StandardToken is Token {
     using Math for *;
@@ -13,7 +13,6 @@ contract StandardToken is Token {
     // a change in the ERC20 protocol to create an unlimited allowance
     uint constant MAX_UINT = 2**256 - 1;
     uint256 public totalTokens;
-    
 
     function transfer(address _to, uint256 _value) public returns (bool success) {
         // Default assumes totalSupply can't be over max (2^256 - 1)

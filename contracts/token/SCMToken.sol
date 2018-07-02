@@ -16,19 +16,19 @@ contract SCMToken is StandardToken {
     constructor() public
     {
         owner = msg.sender;
-        balances[0x486156834261013e9a4f417c9f637fa983ea4026] = 10000; // Give the creator all the initial tokens
+        balances[address(this)] = 10000; // Give the creator all the initial tokens
         totalTokens = 10000; // Update the total supply
         name = 'Scam'; // Set the token name for display purposes
         decimals = 18; // The amount of decimal units
         symbol = 'SCM'; // Set the symbol 
-        emit Transfer(address(0), 0x486156834261013e9a4f417c9f637fa983ea4026, totalTokens);
+        emit Transfer(address(0), address(this), totalTokens);
     }
 
     /* Approves and then calls the receiving contract */
     function approveAndCall(address _spender, uint256 _value, bytes _extraData) public returns (bool success) {
         allowed[msg.sender][_spender] = _value;
         emit Approval(msg.sender, _spender, _value);
-
+    
         // call the receiveApproval function on the contract you want to be notified. This crafts the function signature manually so one doesn't have to include a contract in here just for this.
         // receiveApproval(address _from, uint256 _value, address _tokenContract, bytes _extraData)
         // it is assumed that when does this that the call *should* succeeed, otherwise one would use vanilla approve instead.
@@ -48,9 +48,3 @@ contract SCMToken is StandardToken {
         revert();
     }
 }
-
-/* 
-    function transferAnyERC20Token(address tokenAddress, uint tokens) public onlyOwner returns (bool success) {
-        return ERC20Interface(tokenAddress).transfer(owner, tokens);
-    }
-*/
