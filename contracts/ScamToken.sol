@@ -10,33 +10,16 @@ contract ScamToken is StandardToken {
 
     constructor() public
     {
-        balances[/* ICO Address */0] = 10000; // Give the ICO address all the initial tokens
+        balances[msg.sender] = 10000; // Give the ICO address all the initial tokens
         totalSupply_ = 10000; // Update the total supply
         name = 'Scam Token'; // Set the token name for display purposes
         decimals = 18; // The amount of decimal units
         symbol = 'SCM'; // Set the symbol 
-        emit Transfer(address(0), /* ICO Address */0, totalSupply_);
+        emit Transfer(address(0), msg.sender, totalSupply_);
     }
-
-    /* Approves and then calls the receiving contract 
-    function approveAndCall(address _spender, uint256 _value, bytes _extraData) public returns (bool success) {
-        allowed[msg.sender][_spender] = _value;
-        emit Approval(msg.sender, _spender, _value);
-    
-        // call the receiveApproval function on the contract you want to be notified. This crafts the function signature manually so one doesn't have to include a contract in here just for this.
-        // receiveApproval(address _from, uint256 _value, address _tokenContract, bytes _extraData)
-        // it is assumed that when does this that the call *should* succeeed, otherwise one would use vanilla approve instead.
-        if(!_spender.call(bytes4(bytes32(keccak256("receiveApproval(address,uint256,address,bytes)"))), msg.sender, _value, this, _extraData)) {
-            revert('The spender receiveApproval function is not working.');
-        }
-        return true;
-    }
-    */
 
     function() external {
         // if ETH is sent to this address, send it back.
         revert();
     }
-
 }
-
