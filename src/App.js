@@ -3,11 +3,13 @@ import SimpleStorageContract from "../build/contracts/SimpleStorage.json";
 import getWeb3 from "./utils/getWeb3";
 import WethContract from "../build/contracts/WETH9.json";
 import ScamToken from '../build/contracts/ScamToken.json';
-
+import ScamTokenData from './SCMTokenData.js';
+import Crowdfunding from './Crowdfunding.js'
 import "./css/oswald.css";
 import "./css/open-sans.css";
 import "./css/pure-min.css";
 import "./App.css";
+import SCMTokenData from "./SCMTokenData.js";
 
 const contract = require("truffle-contract");
 
@@ -164,11 +166,6 @@ class App extends Component {
     }
   }
 
-  // SCM Token Functions
-  getSCMBalance() {
-
-  }
-
   render() {
     return (
       <div className="App">
@@ -185,14 +182,9 @@ class App extends Component {
               <p>WETH Balance: {this.state.weth.balance || "Loading"} Wei. --- {this.state.weth.ethBalance || "Loading"} Ether.</p>
               <input type="text" placeholder="What amount?" onChange={this.depositWethFieldChange} value={this.state.weth.depositField}/>
               <button onClick={this.purchaseWeth}>Buy Weth</button>
-              <p>SCM Balance: {this.state.scm.balance || "Loading"}</p>
-              <p>
-                SCM Balance to Claim: {this.state.scm.claimable || "Loading"}
-              </p>
-              <input type="text" placeholder="Deposit Weth" />
-              <button>Purchase SCM Tokens</button>
-              <p>ICO Status: {this.state.icoStatus || "Uknown"}</p>
-              <button>Claim SCM Tokens!</button>
+              <SCMTokenData scm={this.state.scm}/>
+              <Crowdfunding weth={this.instantiateWeth}/>
+              
             </div>
           </div>
         </main>

@@ -8,10 +8,10 @@ module.exports = (deployer, network, accounts) => {
     deployer.deploy(ScamToken).then(instance => {
       var scmTokenInstance = instance;
       return deployer
-        .deploy(Crowdfunding, instance.address)
+        .deploy(Crowdfunding, instance.address, 10)
         .then(instance => {
             crowdFundingInstance = instance;
-            return scmTokenInstance.transfer(crowdFundingInstance.address, 10000, 10);
+            return scmTokenInstance.transfer(crowdFundingInstance.address, 10000);
         });
     });
   }

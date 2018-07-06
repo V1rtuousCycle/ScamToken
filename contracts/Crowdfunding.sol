@@ -5,7 +5,7 @@ import './ScamToken.sol';
 
 contract Crowdfunding {
     bool public active = true;
-    mapping (address => uint256) balances;
+    mapping (address => uint256) public balances;
     uint256 public totalWethRaised;
     uint256 public rate;
     uint256 public timeout;
@@ -21,7 +21,7 @@ contract Crowdfunding {
         rate = _rate;
     }
     
-    function purchase(uint16 _amount) public {
+    function purchase(uint16 _amount) public returns(bool) {
         require(active, "The auction is over. Great job, avoiding this trap took intuition.");
 
         if (weth.transferFrom(msg.sender, address(this), _amount)) {
@@ -33,10 +33,12 @@ contract Crowdfunding {
                 active = false;
                 timeout = now;
                 emit Purchase(msg.sender, (_amount * 10), _amount);
+                return true;
             } else {
                 totalWethRaised += _amount;
                 balances[msg.sender] += _amount;
                 emit Purchase(msg.sender, (_amount * 10), _amount);
+                return true;
             }
         } else {
             emit FailedPurchase(msg.sender, _amount);
@@ -47,14 +49,12 @@ contract Crowdfunding {
         require(!active && (now > timeout + 120), "The super compounding funds aren't ready to be claimed yet.");
         require(balances[msg.sender] >= 0);
 
-        SCM.transfer(msg.sender, balances[msg.sender]);
+        SCM.transfer(msg.sender, (balances[msg.sender] * 10));
         balances[msg.sender] = 0;
 
     }
 
     function() public {
-        revert();
-    }
 
-    /* Internal Interface */
+    }
 }

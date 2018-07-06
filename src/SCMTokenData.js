@@ -5,10 +5,16 @@ export default class SCMTokenData extends Component {
   constructor(props) {
     super(props);
 
-    this.state = {};
+    this.state = {
+
+    };
   }
 
-  static propTypes = {};
+  static propTypes = {
+
+  };
+
+
 
   render() {
     return (
@@ -19,3 +25,5 @@ export default class SCMTokenData extends Component {
     );
   }
 }
+
+
