@@ -1,9 +1,7 @@
 import React, { Component } from "react";
-import SimpleStorageContract from "../build/contracts/SimpleStorage.json";
 import getWeb3 from "./utils/getWeb3";
 import WethContract from "../build/contracts/WETH9.json";
 import ScamToken from '../build/contracts/ScamToken.json';
-import ScamTokenData from './SCMTokenData.js';
 import Crowdfunding from './Crowdfunding.js'
 import "./css/oswald.css";
 import "./css/open-sans.css";
@@ -58,8 +56,8 @@ class App extends Component {
               () => {
                 this.instantiateContract();
                 this.instantiateWeth();
-                this.getWethBalance();
                 setInterval(this.getWethBalance, 3000);
+                this.getWethBalance();
               }
             );
           }
@@ -101,7 +99,6 @@ class App extends Component {
     const WETH_ADDRESS = "0xc778417e063141139fce010982780140aa0cd5ab";
     let truffleWethContract = contract(WethContract);
     truffleWethContract.setProvider(this.state.web3.currentProvider);
-    let wethInstance;
     return truffleWethContract.at(WETH_ADDRESS).then(instance => instance);
   }
 
@@ -136,13 +133,17 @@ class App extends Component {
     var instance = this.instantiateWeth;
     instance()
       .then(wethInstance => {
-        return wethInstance.balanceOf(this.state.account);
+        return wethInstance.balanceOf(this.state.web3.eth.accounts[0]);
       })
       .then(balances => {
         return balances.toNumber();
       })
       .then(result => {
+
         var ethResult = this.state.web3.fromWei(result, 'ether');
+        if (typeof ethResult === 'object') {
+          ethResult = ethResult.toNumber();
+        }
         this.setState({
           weth: {
             ...this.state.weth,
@@ -152,7 +153,7 @@ class App extends Component {
         });
       })
       .catch(err => {
-        console.log(err);
+        console.log('Error: ', err);
       });
   }
 
@@ -180,7 +181,6 @@ class App extends Component {
               <p>WETH Balance: {this.state.weth.balance || "Loading"} Wei. --- {this.state.weth.ethBalance || "Loading"} Ether.</p>
               <input type="text" placeholder="What amount?" onChange={this.depositWethFieldChange} value={this.state.weth.depositField}/>
               <button onClick={this.purchaseWeth}>Buy Weth</button>
-              <SCMTokenData scm={this.state.scm}/>
               <Crowdfunding weth={this.instantiateWeth}/>
               
             </div>
