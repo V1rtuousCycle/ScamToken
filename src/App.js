@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import SimpleStorageContract from "../build/contracts/SimpleStorage.json";
 import getWeb3 from "./utils/getWeb3";
 import WethContract from "../build/contracts/WETH9.json";
+import ScamToken from '../build/contracts/ScamToken.json';
+
 import "./css/oswald.css";
 import "./css/open-sans.css";
 import "./css/pure-min.css";
@@ -160,6 +162,11 @@ class App extends Component {
     } else {
       return false;
     }
+  }
+
+  // SCM Token Functions
+  getSCMBalance() {
+
   }
 
   render() {

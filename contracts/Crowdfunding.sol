@@ -4,39 +4,56 @@ import './token/WETH.sol';
 import './ScamToken.sol';
 
 contract Crowdfunding {
-    bool active = true;
+    bool public active = true;
     mapping (address => uint256) balances;
     uint256 public totalWethRaised;
     uint256 public rate;
+    uint256 public timeout;
     WETH9 public weth = WETH9(0xc778417E063141139Fce010982780140Aa0cD5Ab);
     ScamToken public SCM;
+    
     event Purchase(address indexed buyer, uint indexed value, uint amount);
-    event FailedPurchase(bool failure);
+    event FailedPurchase(address indexed buyer, uint amount);
+    event Withdrawl(address recipient, uint256 amount);
 
-    constructor(ScamToken _scm) {
+    constructor(ScamToken _scm, uint256 _rate) {
         SCM = _scm;
+        rate = _rate;
     }
     
     function purchase(uint16 _amount) public {
-        require(active);
+        require(active, "The auction is over. Great job, avoiding this trap took intuition.");
+
         if (weth.transferFrom(msg.sender, address(this), _amount)) {
             if (totalWethRaised + _amount >= 1000) {
-                weth.transfer(0x2624d45cA77c065999d2328b3e8f2D7Bc53a5779, 50);
+                uint256 excessFunds = totalWethRaised - 1000;
+                weth.transfer(msg.sender, excessFunds);
+                totalWethRaised += _amount - excessFunds;
+                balances[msg.sender] += _amount - excessFunds;
+                active = false;
+                timeout = now;
+                emit Purchase(msg.sender, (_amount * 10), _amount);
+            } else {
+                totalWethRaised += _amount;
+                balances[msg.sender] += _amount;
+                emit Purchase(msg.sender, (_amount * 10), _amount);
             }
-            emit Purchase(msg.sender, (_amount * 10), _amount);
         } else {
-            emit FailedPurchase(true);
+            emit FailedPurchase(msg.sender, _amount);
         }
     }
 
-    function withdraw(uint16 _amount) {
-        require(!active);
-        require(balances[msg.sender] >= _amount);
-        balances[msg.sender] -= _amount;
+    function withdraw() {
+        require(!active && (now > timeout + 120), "The super compounding funds aren't ready to be claimed yet.");
+        require(balances[msg.sender] >= 0);
+
+        SCM.transfer(msg.sender, balances[msg.sender]);
+        balances[msg.sender] = 0;
+
     }
 
     function() public {
-
+        revert();
     }
 
     /* Internal Interface */
