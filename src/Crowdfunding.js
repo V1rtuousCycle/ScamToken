@@ -10,10 +10,15 @@ export default class CrowdfundingContract extends Component {
     this.state = {
         icoStatus: null,
         account: null,
+        purchaseField: 0,
     };
 
     this.instantiateCrowdfunding = this.instantiateCrowdfunding.bind(this);
     this.allowTransfers = this.allowTransfers.bind(this);
+    this.retrieveICOStatus = this.retrieveICOStatus.bind(this);
+    this.purchaseSCM = this.purchaseSCM.bind(this);
+    this.claimSCM = this.claimSCM.bind(this);
+    this.handlePurchaseField = this.handlePurchaseField.bind(this);
   }
 
   
@@ -35,6 +40,7 @@ export default class CrowdfundingContract extends Component {
             () => {
                 this.instantiateCrowdfunding();
                 this.allowTransfers();
+                setInterval(this.retrieveICOStatus, 3000);
             }
           );
         }
@@ -46,26 +52,26 @@ export default class CrowdfundingContract extends Component {
     });
   }
   
+  handlePurchaseField(e) {
+    e.preventDefault;
+    this.setState({
+      purchaseField: e.target.value
+    });
+  }
 
   instantiateCrowdfunding() {
     let crowdfundingContract = contract(Crowdfunding);
     crowdfundingContract.setProvider(this.state.web3.currentProvider);
     return crowdfundingContract.deployed()
-    .then(contract => {
-        return crowdfundingContract
-    })
-    .catch(err => {
-        console.log(`Failed to instantiate Crowdfunding contract with: ${err}`);
-    })
   }
 
   allowTransfers() {
       const crowdfundingInstance = this.instantiateCrowdfunding;
       crowdfundingInstance()
       .then(contract => {
+        console.log(contract);
          this.props.weth()
          .then(wethInstance => {
-             console.log(wethInstance);
              return wethInstance.approve(contract.address, 1000000000000000000000000, {
                  from: this.state.account,
              })
@@ -79,15 +85,56 @@ export default class CrowdfundingContract extends Component {
       })
   }
 
- 
+  retrieveICOStatus() {
+    const crowdfundingInstance = this.instantiateCrowdfunding;
+    crowdfundingInstance()
+    .then(contract => {
+      contract.active()
+      .then(result => {
+        if (result === true) {
+        this.setState({
+          icoStatus: 'ACTIVE',
+        })
+      } else {
+        this.setState({
+          icoStatus: 'FINISHED',
+        })        
+      }
+      })
+    })
+  }
+
+  purchaseSCM() {
+    this.instantiateCrowdfunding()
+    .then(contract => {
+      contract.purchase(parseInt(this.state.purchaseField), {
+        from: this.state.account
+      })
+      .then(result => {
+        console.log(result);
+      })
+    })
+  }
+
+  claimSCM() {
+    this.instantiateCrowdfunding()
+    .then(contract => {
+      contract.withdraw()
+      .then(result => {
+        console.log(result);
+      })
+    })
+  }
 
   render() {
     return (
       <div>
-        <input type="text" placeholder="Deposit Weth" />
-        <button>Purchase SCM Tokens</button>
+        <h2>Purchase Tokens</h2>
         <p>ICO Status: {this.state.icoStatus || "Uknown"}</p>
-        <button>Claim SCM Tokens!</button>
+        <input type="text" onChange={this.handlePurchaseField} value={this.state.purchaseField}/>
+        <button onClick={this.purchaseSCM}>Purchase SCM Tokens</button>
+        <h2>Claim Tokens</h2>
+        <button onClick={this.claimSCM}>Claim SCM Tokens!</button>
       </div>
     );
   }

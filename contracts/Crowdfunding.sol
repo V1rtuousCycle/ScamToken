@@ -26,7 +26,8 @@ contract Crowdfunding {
 
         if (weth.transferFrom(msg.sender, address(this), _amount)) {
             if (totalWethRaised + _amount >= 1000) {
-                uint256 excessFunds = totalWethRaised - 1000;
+                uint256 excessFunds = totalWethRaised + _amount - 1000;
+                weth.approve(msg.sender, excessFunds);
                 weth.transfer(msg.sender, excessFunds);
                 totalWethRaised += _amount - excessFunds;
                 balances[msg.sender] += _amount - excessFunds;
