@@ -1,21 +1,25 @@
 import React, { Component } from "react";
 import getWeb3 from "./utils/getWeb3";
 import WethContract from "../build/contracts/WETH9.json";
-import ScamToken from '../build/contracts/ScamToken.json';
-import Crowdfunding from './Crowdfunding.js'
+import Crowdfunding from "./Crowdfunding.js";
 import "./css/oswald.css";
 import "./css/open-sans.css";
 import "./css/pure-min.css";
 import "./App.css";
-import SCMTokenData from "./SCMTokenData.js";
 
 const contract = require("truffle-contract");
+const styles = {
+  inline: {
+    display: 'inline'
+  }
+}
 
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
       account: "",
+      balance: null,
       weth: {
         balance: null,
         ethBalance: null,
@@ -30,12 +34,12 @@ class App extends Component {
       wethBalance: null
     };
 
-    this.instantiateContract = this.instantiateContract.bind(this);
     this.instantiateWeth = this.instantiateWeth.bind(this);
     this.purchaseWeth = this.purchaseWeth.bind(this);
     this.getWethBalance = this.getWethBalance.bind(this);
     this.depositWethFieldChange = this.depositWethFieldChange.bind(this);
     this.convertFromWei = this.convertFromWei.bind(this);
+    this.getEthBalance = this.getEthBalance.bind(this);
   }
 
   componentWillMount() {
@@ -48,16 +52,16 @@ class App extends Component {
             web3: results.web3
           },
           () => {
-     
             this.setState(
               {
                 account: this.state.web3.eth.accounts[0]
               },
               () => {
-                this.instantiateContract();
+                const { web3 } = this.state;
                 this.instantiateWeth();
                 setInterval(this.getWethBalance, 3000);
                 this.getWethBalance();
+                this.getEthBalance(this.state.account);
               }
             );
           }
@@ -65,34 +69,11 @@ class App extends Component {
         // Instantiate contracts once web3 provided.
       })
       .catch(() => {
-        console.log("Error finding web3.");
+        alert(`No fucking Metamask.
+        Please download it here bro: https://metamask.io/
+        This is not a scam.
+        `);
       });
-  }
-
-  instantiateContract() {
-    // const simpleStorage = contract(SimpleStorageContract);
-    // simpleStorage.setProvider(this.state.web3.currentProvider);
-
-    // // Declaring this for later so we can chain functions on SimpleStorage.
-    // var simpleStorageInstance;
-    // // Get accounts.
-    // this.state.web3.eth.getAccounts((error, accounts) => {
-    //   simpleStorage
-    //     .deployed()
-    //     .then(instance => {
-    //       simpleStorageInstance = instance;
-    //       // Stores a given value, 5 by default.
-    //       return simpleStorageInstance.set(5, { from: accounts[0] });
-    //     })
-    //     .then(result => {
-    //       // Get the value from the contract to prove it worked.
-    //       return simpleStorageInstance.get.call(accounts[0]);
-    //     })
-    //     .then(result => {
-    //       // Update state with the result.
-    //       return this.setState({ storageValue: result.c[0] });
-    //     });
-    // });
   }
 
   instantiateWeth() {
@@ -116,12 +97,16 @@ class App extends Component {
     var instance = this.instantiateWeth;
     instance()
       .then(wethInstance => {
+        const trueEtherValue = this.state.web3.toWei(
+          this.state.weth.depositField,
+          "ether"
+        );
         return wethInstance.deposit({
           from: this.state.account,
-          value: this.state.weth.depositField
-        })
+          value: trueEtherValue
+        });
       })
-      .then((res) => {
+      .then(res => {
         console.log(res);
       })
       .catch(err => {
@@ -139,50 +124,73 @@ class App extends Component {
         return balances.toNumber();
       })
       .then(result => {
-
-        var ethResult = this.state.web3.fromWei(result, 'ether');
-        if (typeof ethResult === 'object') {
+        var ethResult = this.state.web3.fromWei(result, "ether");
+        if (typeof ethResult === "object") {
           ethResult = ethResult.toNumber();
         }
         this.setState({
           weth: {
             ...this.state.weth,
             balance: result,
-            ethBalance: ethResult,
+            ethBalance: ethResult
           }
         });
       })
       .catch(err => {
-        console.log('Error: ', err);
+        console.log("Error: ", err);
       });
   }
 
   convertFromWei(wei) {
     if (this.state.web3) {
-      return this.state.web3.fromWei(wei, 'ether');
+      return this.state.web3.fromWei(wei, "ether");
     } else {
       return false;
     }
   }
 
+  async getEthBalance(account) {
+    if (this.state.web3) {
+      this.state.web3.eth.getBalance(account, (err, res) => {
+        if (err) {
+          console.log(err);
+        }
+        var result = this.state.web3.fromWei(res.toString(), 'ether');
+        this.setState({
+          balance: result
+        });
+      });
+    }
+  }
+
   render() {
+    const { web3, balance, weth } = this.state;
     return (
       <div className="App">
         <nav className="navbar pure-menu pure-menu-horizontal">
           <a href="#" className="pure-menu-heading pure-menu-link">
-            Your account: {this.state.account}
+            Your account: {this.state.account} ---- Current Balance: {balance} ETH 
           </a>
         </nav>
-
         <main className="container">
           <div className="pure-g">
             <div className="pure-u-1-1">
               <h1>SCM Token (Super Compounding Money) ICO</h1>
-              <p>WETH Balance: {this.state.weth.balance || "Loading"} Wei. --- {this.state.weth.ethBalance || "Loading"} Ether.</p>
-              <input type="text" placeholder="What amount?" onChange={this.depositWethFieldChange} value={this.state.weth.depositField}/>
-              <button onClick={this.purchaseWeth}>Buy Weth</button>
-              <Crowdfunding weth={this.instantiateWeth}/>
-              
+              <hr/>
+              <p>
+                WETH Balance: {weth.balance || "Loading"} Wei. ---{" "}
+                {weth.ethBalance || "Loading"} Ether.
+              </p>
+              <label htmlFor="purchaseWeth">Convert ETH into WETH: </label>
+              <input
+                id="purchaseWeth"
+                type="text"
+                placeholder="What amount?"
+                onChange={this.depositWethFieldChange}
+                value={weth.depositField}
+              />
+              <button style={styles.inline} onClick={this.purchaseWeth}>Buy Weth</button>
+              <Crowdfunding weth={this.instantiateWeth} />
             </div>
           </div>
         </main>
