@@ -5,8 +5,8 @@ import './ScamToken.sol';
 
 contract Crowdfunding {
     // Rinkeby WETH contract
-    WETH9 public weth = WETH9(0xc778417E063141139Fce010982780140Aa0cD5Ab);
-    ScamToken public SCM;
+    WETH9 public weth;
+    ScamToken public scm;
     
     bool public active = true;
     mapping (address => uint256) public balances;
@@ -17,8 +17,9 @@ contract Crowdfunding {
     event FailedPurchase(address indexed buyer, uint amount);
     event Withdrawl(address recipient, uint256 amount);
 
-    constructor(ScamToken _scm) {
-        SCM = _scm;
+    constructor(ScamToken _scm, WETH9 _weth) {
+        scm = _scm;
+        weth = _weth;
     }
     
     function purchase(uint _amount) public returns(bool) {
@@ -52,7 +53,7 @@ contract Crowdfunding {
         uint256 senderBalance = balances[msg.sender];
         balances[msg.sender] = 0;
 
-        SCM.transfer(msg.sender, (senderBalance * 10));
+        scm.transfer(msg.sender, (senderBalance * 10));
 
     }
 
