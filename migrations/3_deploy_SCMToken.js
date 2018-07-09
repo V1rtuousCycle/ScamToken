@@ -11,7 +11,7 @@ module.exports = (deployer, network, accounts) => {
         .deploy(Crowdfunding, instance.address)
         .then(instance => {
             crowdFundingInstance = instance;
-            return scmTokenInstance.transfer(crowdFundingInstance.address, 10000);
+            return scmTokenInstance.transfer(crowdFundingInstance.address, 1000000000000000000000);
         });
     });
   }

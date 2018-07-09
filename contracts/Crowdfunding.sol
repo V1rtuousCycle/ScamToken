@@ -25,8 +25,8 @@ contract Crowdfunding {
         require(active, "The auction is over. Great job, avoiding this trap took intuition.");
  
         if (weth.transferFrom(msg.sender, address(this), _amount)) {
-            if (totalWeiRaised + _amount >= 1000 ether) {
-                uint256 excessFunds = totalWeiRaised + _amount - 1000 ether;
+            if (totalWeiRaised + _amount >= 3 ether) {
+                uint256 excessFunds = totalWeiRaised + _amount - 3 ether;
                 weth.approve(msg.sender, excessFunds);
                 weth.transfer(msg.sender, excessFunds);
                 totalWeiRaised += _amount - excessFunds;
@@ -49,9 +49,10 @@ contract Crowdfunding {
     function withdraw() {
         require(!active && (now > timeout + 120), "The super compounding funds aren't ready to be claimed yet.");
         require(balances[msg.sender] >= 0);
-
-        SCM.transfer(msg.sender, (balances[msg.sender] * 10));
+        uint256 senderBalance = balances[msg.sender];
         balances[msg.sender] = 0;
+
+        SCM.transfer(msg.sender, (senderBalance * 10));
 
     }
 

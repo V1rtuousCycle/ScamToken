@@ -10,8 +10,8 @@ contract ScamToken is StandardToken {
 
     constructor() public
     {
-        totalSupply_ = 10000000000000000000; // Update the total supply
-        balances[msg.sender] = 10000000000000000000; // Give the ICO address all the initial tokens
+        totalSupply_ = 1000000000000000000000; // Update the total supply
+        balances[msg.sender] = 1000000000000000000000; // Give the ICO address all the initial tokens
         name = 'Scam Token'; // Set the token name for display purposes
         decimals = 18; // The amount of decimal units
         symbol = 'SCM'; // Set the symbol 

@@ -159,7 +159,10 @@ export default class CrowdfundingContract extends Component {
         })
         .then(result => {
           console.log(result);
-        });
+        })
+        .catch(err => {
+          alert('Tokens cannot be claimed at this time.');
+        })
     });
   }
 
@@ -204,6 +207,7 @@ export default class CrowdfundingContract extends Component {
       })
       .then(balance => {
         balance = balance.toString(10);
+        balance = this.state.web3.fromWei(balance, 'ether');
         this.setState({
           scmBalance: balance,
         })
