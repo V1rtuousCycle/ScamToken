@@ -8,7 +8,7 @@ module.exports = (deployer, network, accounts) => {
     deployer.deploy(ScamToken).then(instance => {
       var scmTokenInstance = instance;
       return deployer
-        .deploy(Crowdfunding, instance.address, 10)
+        .deploy(Crowdfunding, instance.address)
         .then(instance => {
             crowdFundingInstance = instance;
             return scmTokenInstance.transfer(crowdFundingInstance.address, 10000);

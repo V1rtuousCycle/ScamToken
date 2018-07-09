@@ -4,45 +4,45 @@ import './token/WETH.sol';
 import './ScamToken.sol';
 
 contract Crowdfunding {
-    bool public active = true;
-    mapping (address => uint256) public balances;
-    uint256 public totalWethRaised;
-    uint256 public rate;
-    uint256 public timeout;
+    // Rinkeby WETH contract
     WETH9 public weth = WETH9(0xc778417E063141139Fce010982780140Aa0cD5Ab);
     ScamToken public SCM;
+    
+    bool public active = true;
+    mapping (address => uint256) public balances;
+    uint256 public totalWeiRaised;
+    uint256 public timeout;
     
     event Purchase(address indexed buyer, uint indexed value, uint amount);
     event FailedPurchase(address indexed buyer, uint amount);
     event Withdrawl(address recipient, uint256 amount);
 
-    constructor(ScamToken _scm, uint256 _rate) {
+    constructor(ScamToken _scm) {
         SCM = _scm;
-        rate = _rate;
     }
     
-    function purchase(uint16 _amount) public returns(bool) {
+    function purchase(uint _amount) public returns(bool) {
         require(active, "The auction is over. Great job, avoiding this trap took intuition.");
-
+ 
         if (weth.transferFrom(msg.sender, address(this), _amount)) {
-            if (totalWethRaised + _amount >= 1000) {
-                uint256 excessFunds = totalWethRaised + _amount - 1000;
+            if (totalWeiRaised + _amount >= 1000 ether) {
+                uint256 excessFunds = totalWeiRaised + _amount - 1000 ether;
                 weth.approve(msg.sender, excessFunds);
                 weth.transfer(msg.sender, excessFunds);
-                totalWethRaised += _amount - excessFunds;
+                totalWeiRaised += _amount - excessFunds;
                 balances[msg.sender] += _amount - excessFunds;
                 active = false;
                 timeout = now;
-                emit Purchase(msg.sender, (_amount * 10), _amount);
+                emit Purchase(msg.sender, (_amount/(1 ether) * 10), _amount/(1 ether));
                 return true;
             } else {
-                totalWethRaised += _amount;
+                totalWeiRaised += _amount;
                 balances[msg.sender] += _amount;
-                emit Purchase(msg.sender, (_amount * 10), _amount);
+                emit Purchase(msg.sender, (_amount/(1 ether) * 10), _amount/(1 ether));
                 return true;
             }
         } else {
-            emit FailedPurchase(msg.sender, _amount);
+            emit FailedPurchase(msg.sender, _amount/(1 ether));
         }
     }
 
