@@ -132,13 +132,13 @@ export default class CrowdfundingContract extends Component {
 
   purchaseSCM() {
     this.instantiateCrowdfunding().then(contract => {
+      console.log(contract, "account", this.state.account);
       // let trueEtherValue = this.state.web3.toWei(
       //   this.state.purchaseField,
       //   "ether"
       // );
       // console.log(typeof trueEtherValue, "trueETH", trueEtherValue);
-      console.log(this.state.purchaseField, typeof this.state.purchaseField);
-      contract
+      return contract
         .purchase(this.state.web3.toWei(this.state.purchaseField, "ether"), {
           from: this.state.account
         })

@@ -5,7 +5,7 @@ module.exports = {
       port: 8545,
       from: '0x486156834261013e9a4f417c9f637fa983ea4026',
       network_id: "4",
-      gas: 4000000 // Gas limit used for deploys  
+      gas: 40000000,  // Gas limit used for deploys  
     },
     ganache: {
       host: '127.0.0.1',
