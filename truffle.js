@@ -7,14 +7,11 @@ module.exports = {
       network_id: "4",
       gas: 4000000 // Gas limit used for deploys  
     },
-    development: {
-      host: '127.0.0.1',
-      port: 7545,
-      network_id: "*" // Match any network id
-    },
     ganache: {
       host: '127.0.0.1',
       port: 7545,
+      from: '0x90f8bf6a479f320ead074411a4b0e7944ea8c9c1',
+      gas: 4000000, // Gas limit used for deploys  
       network_id: "*" // Match any network id
     }
   }

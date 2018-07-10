@@ -116,17 +116,17 @@
     "absolutePath": "/Users/antonvs/Projects/gnosis/ScamToken/contracts/tinkering/MountContract.sol",
     "exportedSymbols": {
       "MountContract": [
-        1760
+        1774
       ],
       "MountedContract": [
-        1682
+        1696
       ]
     },
-    "id": 1761,
+    "id": 1775,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 1660,
+        "id": 1674,
         "literals": [
           "solidity",
           "^",
@@ -142,19 +142,19 @@
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 1682,
+        "id": 1696,
         "linearizedBaseContracts": [
-          1682
+          1696
         ],
         "name": "MountedContract",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "constant": false,
-            "id": 1662,
+            "id": 1676,
             "name": "totalValue",
             "nodeType": "VariableDeclaration",
-            "scope": 1682,
+            "scope": 1696,
             "src": "56:25:7",
             "stateVariable": true,
             "storageLocation": "default",
@@ -163,7 +163,7 @@
               "typeString": "uint256"
             },
             "typeName": {
-              "id": 1661,
+              "id": 1675,
               "name": "uint256",
               "nodeType": "ElementaryTypeName",
               "src": "56:7:7",
@@ -177,13 +177,13 @@
           },
           {
             "body": {
-              "id": 1665,
+              "id": 1679,
               "nodeType": "Block",
               "src": "117:12:7",
               "statements": []
             },
             "documentation": null,
-            "id": 1666,
+            "id": 1680,
             "implemented": true,
             "isConstructor": true,
             "isDeclaredConst": false,
@@ -191,19 +191,19 @@
             "name": "",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 1663,
+              "id": 1677,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "99:2:7"
             },
             "payable": true,
             "returnParameters": {
-              "id": 1664,
+              "id": 1678,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "117:0:7"
             },
-            "scope": 1682,
+            "scope": 1696,
             "src": "88:41:7",
             "stateMutability": "payable",
             "superFunction": null,
@@ -211,13 +211,13 @@
           },
           {
             "body": {
-              "id": 1669,
+              "id": 1683,
               "nodeType": "Block",
               "src": "163:8:7",
               "statements": []
             },
             "documentation": null,
-            "id": 1670,
+            "id": 1684,
             "implemented": true,
             "isConstructor": false,
             "isDeclaredConst": false,
@@ -225,19 +225,19 @@
             "name": "",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 1667,
+              "id": 1681,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "143:2:7"
             },
             "payable": true,
             "returnParameters": {
-              "id": 1668,
+              "id": 1682,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "163:0:7"
             },
-            "scope": 1682,
+            "scope": 1696,
             "src": "135:36:7",
             "stateMutability": "payable",
             "superFunction": null,
@@ -245,7 +245,7 @@
           },
           {
             "body": {
-              "id": 1680,
+              "id": 1694,
               "nodeType": "Block",
               "src": "230:45:7",
               "statements": [
@@ -257,14 +257,14 @@
                       "arguments": [
                         {
                           "argumentTypes": null,
-                          "id": 1676,
+                          "id": 1690,
                           "name": "this",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 3016,
+                          "referencedDeclaration": 2616,
                           "src": "255:4:7",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_contract$_MountedContract_$1682",
+                            "typeIdentifier": "t_contract$_MountedContract_$1696",
                             "typeString": "contract MountedContract"
                           }
                         }
@@ -272,11 +272,11 @@
                       "expression": {
                         "argumentTypes": [
                           {
-                            "typeIdentifier": "t_contract$_MountedContract_$1682",
+                            "typeIdentifier": "t_contract$_MountedContract_$1696",
                             "typeString": "contract MountedContract"
                           }
                         ],
-                        "id": 1675,
+                        "id": 1689,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
@@ -289,7 +289,7 @@
                         },
                         "typeName": "address"
                       },
-                      "id": 1677,
+                      "id": 1691,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -303,7 +303,7 @@
                         "typeString": "address"
                       }
                     },
-                    "id": 1678,
+                    "id": 1692,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -317,15 +317,15 @@
                       "typeString": "uint256"
                     }
                   },
-                  "functionReturnParameters": 1674,
-                  "id": 1679,
+                  "functionReturnParameters": 1688,
+                  "id": 1693,
                   "nodeType": "Return",
                   "src": "240:28:7"
                 }
               ]
             },
             "documentation": null,
-            "id": 1681,
+            "id": 1695,
             "implemented": true,
             "isConstructor": false,
             "isDeclaredConst": true,
@@ -333,22 +333,22 @@
             "name": "getBalance",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 1671,
+              "id": 1685,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "200:2:7"
             },
             "payable": false,
             "returnParameters": {
-              "id": 1674,
+              "id": 1688,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1673,
+                  "id": 1687,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1681,
+                  "scope": 1695,
                   "src": "224:4:7",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -357,7 +357,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 1672,
+                    "id": 1686,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
                     "src": "224:4:7",
@@ -372,14 +372,14 @@
               ],
               "src": "223:6:7"
             },
-            "scope": 1682,
+            "scope": 1696,
             "src": "181:94:7",
             "stateMutability": "view",
             "superFunction": null,
             "visibility": "public"
           }
         ],
-        "scope": 1761,
+        "scope": 1775,
         "src": "25:252:7"
       },
       {
@@ -388,35 +388,35 @@
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 1760,
+        "id": 1774,
         "linearizedBaseContracts": [
-          1760
+          1774
         ],
         "name": "MountContract",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "constant": false,
-            "id": 1684,
+            "id": 1698,
             "name": "mounted",
             "nodeType": "VariableDeclaration",
-            "scope": 1760,
+            "scope": 1774,
             "src": "308:30:7",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_contract$_MountedContract_$1682",
+              "typeIdentifier": "t_contract$_MountedContract_$1696",
               "typeString": "contract MountedContract"
             },
             "typeName": {
               "contractScope": null,
-              "id": 1683,
+              "id": 1697,
               "name": "MountedContract",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 1682,
+              "referencedDeclaration": 1696,
               "src": "308:15:7",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_MountedContract_$1682",
+                "typeIdentifier": "t_contract$_MountedContract_$1696",
                 "typeString": "contract MountedContract"
               }
             },
@@ -425,10 +425,10 @@
           },
           {
             "constant": false,
-            "id": 1686,
+            "id": 1700,
             "name": "lastDeposit",
             "nodeType": "VariableDeclaration",
-            "scope": 1760,
+            "scope": 1774,
             "src": "344:23:7",
             "stateVariable": true,
             "storageLocation": "default",
@@ -437,7 +437,7 @@
               "typeString": "uint256"
             },
             "typeName": {
-              "id": 1685,
+              "id": 1699,
               "name": "uint",
               "nodeType": "ElementaryTypeName",
               "src": "344:4:7",
@@ -451,13 +451,13 @@
           },
           {
             "body": {
-              "id": 1689,
+              "id": 1703,
               "nodeType": "Block",
               "src": "403:16:7",
               "statements": []
             },
             "documentation": null,
-            "id": 1690,
+            "id": 1704,
             "implemented": true,
             "isConstructor": true,
             "isDeclaredConst": false,
@@ -465,19 +465,19 @@
             "name": "",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 1687,
+              "id": 1701,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "385:2:7"
             },
             "payable": true,
             "returnParameters": {
-              "id": 1688,
+              "id": 1702,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "403:0:7"
             },
-            "scope": 1760,
+            "scope": 1774,
             "src": "374:45:7",
             "stateMutability": "payable",
             "superFunction": null,
@@ -485,28 +485,28 @@
           },
           {
             "body": {
-              "id": 1701,
+              "id": 1715,
               "nodeType": "Block",
               "src": "475:54:7",
               "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 1699,
+                    "id": 1713,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "argumentTypes": null,
-                      "id": 1695,
+                      "id": 1709,
                       "name": "mounted",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 1684,
+                      "referencedDeclaration": 1698,
                       "src": "485:7:7",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_contract$_MountedContract_$1682",
+                        "typeIdentifier": "t_contract$_MountedContract_$1696",
                         "typeString": "contract MountedContract"
                       }
                     },
@@ -517,11 +517,11 @@
                       "arguments": [
                         {
                           "argumentTypes": null,
-                          "id": 1697,
+                          "id": 1711,
                           "name": "_mountAddr",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 1692,
+                          "referencedDeclaration": 1706,
                           "src": "511:10:7",
                           "typeDescriptions": {
                             "typeIdentifier": "t_address",
@@ -536,18 +536,18 @@
                             "typeString": "address"
                           }
                         ],
-                        "id": 1696,
+                        "id": 1710,
                         "name": "MountedContract",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1682,
+                        "referencedDeclaration": 1696,
                         "src": "495:15:7",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_type$_t_contract$_MountedContract_$1682_$",
+                          "typeIdentifier": "t_type$_t_contract$_MountedContract_$1696_$",
                           "typeString": "type(contract MountedContract)"
                         }
                       },
-                      "id": 1698,
+                      "id": 1712,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -557,24 +557,24 @@
                       "nodeType": "FunctionCall",
                       "src": "495:27:7",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_contract$_MountedContract_$1682",
+                        "typeIdentifier": "t_contract$_MountedContract_$1696",
                         "typeString": "contract MountedContract"
                       }
                     },
                     "src": "485:37:7",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_MountedContract_$1682",
+                      "typeIdentifier": "t_contract$_MountedContract_$1696",
                       "typeString": "contract MountedContract"
                     }
                   },
-                  "id": 1700,
+                  "id": 1714,
                   "nodeType": "ExpressionStatement",
                   "src": "485:37:7"
                 }
               ]
             },
             "documentation": null,
-            "id": 1702,
+            "id": 1716,
             "implemented": true,
             "isConstructor": false,
             "isDeclaredConst": false,
@@ -582,15 +582,15 @@
             "name": "Mount",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 1693,
+              "id": 1707,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1692,
+                  "id": 1706,
                   "name": "_mountAddr",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1702,
+                  "scope": 1716,
                   "src": "440:18:7",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -599,7 +599,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 1691,
+                    "id": 1705,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "440:7:7",
@@ -616,12 +616,12 @@
             },
             "payable": true,
             "returnParameters": {
-              "id": 1694,
+              "id": 1708,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "475:0:7"
             },
-            "scope": 1760,
+            "scope": 1774,
             "src": "425:104:7",
             "stateMutability": "payable",
             "superFunction": null,
@@ -629,7 +629,7 @@
           },
           {
             "body": {
-              "id": 1713,
+              "id": 1727,
               "nodeType": "Block",
               "src": "573:53:7",
               "statements": [
@@ -641,18 +641,18 @@
                         "argumentTypes": null,
                         "expression": {
                           "argumentTypes": null,
-                          "id": 1709,
+                          "id": 1723,
                           "name": "msg",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 2973,
+                          "referencedDeclaration": 2573,
                           "src": "609:3:7",
                           "typeDescriptions": {
                             "typeIdentifier": "t_magic_message",
                             "typeString": "msg"
                           }
                         },
-                        "id": 1710,
+                        "id": 1724,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
@@ -679,14 +679,14 @@
                         "arguments": [
                           {
                             "argumentTypes": null,
-                            "id": 1706,
+                            "id": 1720,
                             "name": "mounted",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 1684,
+                            "referencedDeclaration": 1698,
                             "src": "591:7:7",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_contract$_MountedContract_$1682",
+                              "typeIdentifier": "t_contract$_MountedContract_$1696",
                               "typeString": "contract MountedContract"
                             }
                           }
@@ -694,11 +694,11 @@
                         "expression": {
                           "argumentTypes": [
                             {
-                              "typeIdentifier": "t_contract$_MountedContract_$1682",
+                              "typeIdentifier": "t_contract$_MountedContract_$1696",
                               "typeString": "contract MountedContract"
                             }
                           ],
-                          "id": 1705,
+                          "id": 1719,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": true,
@@ -711,7 +711,7 @@
                           },
                           "typeName": "address"
                         },
-                        "id": 1707,
+                        "id": 1721,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
@@ -725,7 +725,7 @@
                           "typeString": "address"
                         }
                       },
-                      "id": 1708,
+                      "id": 1722,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -739,7 +739,7 @@
                         "typeString": "function (uint256)"
                       }
                     },
-                    "id": 1711,
+                    "id": 1725,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -753,14 +753,14 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 1712,
+                  "id": 1726,
                   "nodeType": "ExpressionStatement",
                   "src": "583:36:7"
                 }
               ]
             },
             "documentation": null,
-            "id": 1714,
+            "id": 1728,
             "implemented": true,
             "isConstructor": false,
             "isDeclaredConst": false,
@@ -768,19 +768,19 @@
             "name": "callMounted",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 1703,
+              "id": 1717,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "555:2:7"
             },
             "payable": true,
             "returnParameters": {
-              "id": 1704,
+              "id": 1718,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "573:0:7"
             },
-            "scope": 1760,
+            "scope": 1774,
             "src": "535:91:7",
             "stateMutability": "payable",
             "superFunction": null,
@@ -788,7 +788,7 @@
           },
           {
             "body": {
-              "id": 1723,
+              "id": 1737,
               "nodeType": "Block",
               "src": "692:40:7",
               "statements": [
@@ -798,14 +798,14 @@
                     "arguments": [
                       {
                         "argumentTypes": null,
-                        "id": 1720,
+                        "id": 1734,
                         "name": "mounted",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1684,
+                        "referencedDeclaration": 1698,
                         "src": "717:7:7",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_MountedContract_$1682",
+                          "typeIdentifier": "t_contract$_MountedContract_$1696",
                           "typeString": "contract MountedContract"
                         }
                       }
@@ -813,11 +813,11 @@
                     "expression": {
                       "argumentTypes": [
                         {
-                          "typeIdentifier": "t_contract$_MountedContract_$1682",
+                          "typeIdentifier": "t_contract$_MountedContract_$1696",
                           "typeString": "contract MountedContract"
                         }
                       ],
-                      "id": 1719,
+                      "id": 1733,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
@@ -830,7 +830,7 @@
                       },
                       "typeName": "address"
                     },
-                    "id": 1721,
+                    "id": 1735,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -844,15 +844,15 @@
                       "typeString": "address"
                     }
                   },
-                  "functionReturnParameters": 1718,
-                  "id": 1722,
+                  "functionReturnParameters": 1732,
+                  "id": 1736,
                   "nodeType": "Return",
                   "src": "702:23:7"
                 }
               ]
             },
             "documentation": null,
-            "id": 1724,
+            "id": 1738,
             "implemented": true,
             "isConstructor": false,
             "isDeclaredConst": true,
@@ -860,22 +860,22 @@
             "name": "addressMounted",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 1715,
+              "id": 1729,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "659:2:7"
             },
             "payable": false,
             "returnParameters": {
-              "id": 1718,
+              "id": 1732,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1717,
+                  "id": 1731,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1724,
+                  "scope": 1738,
                   "src": "683:7:7",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -884,7 +884,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 1716,
+                    "id": 1730,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "683:7:7",
@@ -899,7 +899,7 @@
               ],
               "src": "682:9:7"
             },
-            "scope": 1760,
+            "scope": 1774,
             "src": "636:96:7",
             "stateMutability": "view",
             "superFunction": null,
@@ -907,7 +907,7 @@
           },
           {
             "body": {
-              "id": 1733,
+              "id": 1747,
               "nodeType": "Block",
               "src": "795:37:7",
               "statements": [
@@ -917,14 +917,14 @@
                     "arguments": [
                       {
                         "argumentTypes": null,
-                        "id": 1730,
+                        "id": 1744,
                         "name": "this",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 3018,
+                        "referencedDeclaration": 2618,
                         "src": "820:4:7",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_MountContract_$1760",
+                          "typeIdentifier": "t_contract$_MountContract_$1774",
                           "typeString": "contract MountContract"
                         }
                       }
@@ -932,11 +932,11 @@
                     "expression": {
                       "argumentTypes": [
                         {
-                          "typeIdentifier": "t_contract$_MountContract_$1760",
+                          "typeIdentifier": "t_contract$_MountContract_$1774",
                           "typeString": "contract MountContract"
                         }
                       ],
-                      "id": 1729,
+                      "id": 1743,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
@@ -949,7 +949,7 @@
                       },
                       "typeName": "address"
                     },
-                    "id": 1731,
+                    "id": 1745,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -963,15 +963,15 @@
                       "typeString": "address"
                     }
                   },
-                  "functionReturnParameters": 1728,
-                  "id": 1732,
+                  "functionReturnParameters": 1742,
+                  "id": 1746,
                   "nodeType": "Return",
                   "src": "805:20:7"
                 }
               ]
             },
             "documentation": null,
-            "id": 1734,
+            "id": 1748,
             "implemented": true,
             "isConstructor": false,
             "isDeclaredConst": true,
@@ -979,22 +979,22 @@
             "name": "viewAddress",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 1725,
+              "id": 1739,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "762:2:7"
             },
             "payable": false,
             "returnParameters": {
-              "id": 1728,
+              "id": 1742,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1727,
+                  "id": 1741,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1734,
+                  "scope": 1748,
                   "src": "786:7:7",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1003,7 +1003,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 1726,
+                    "id": 1740,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "786:7:7",
@@ -1018,7 +1018,7 @@
               ],
               "src": "785:9:7"
             },
-            "scope": 1760,
+            "scope": 1774,
             "src": "742:90:7",
             "stateMutability": "view",
             "superFunction": null,
@@ -1026,7 +1026,7 @@
           },
           {
             "body": {
-              "id": 1744,
+              "id": 1758,
               "nodeType": "Block",
               "src": "892:45:7",
               "statements": [
@@ -1038,14 +1038,14 @@
                       "arguments": [
                         {
                           "argumentTypes": null,
-                          "id": 1740,
+                          "id": 1754,
                           "name": "this",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 3018,
+                          "referencedDeclaration": 2618,
                           "src": "917:4:7",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_contract$_MountContract_$1760",
+                            "typeIdentifier": "t_contract$_MountContract_$1774",
                             "typeString": "contract MountContract"
                           }
                         }
@@ -1053,11 +1053,11 @@
                       "expression": {
                         "argumentTypes": [
                           {
-                            "typeIdentifier": "t_contract$_MountContract_$1760",
+                            "typeIdentifier": "t_contract$_MountContract_$1774",
                             "typeString": "contract MountContract"
                           }
                         ],
-                        "id": 1739,
+                        "id": 1753,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
@@ -1070,7 +1070,7 @@
                         },
                         "typeName": "address"
                       },
-                      "id": 1741,
+                      "id": 1755,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -1084,7 +1084,7 @@
                         "typeString": "address"
                       }
                     },
-                    "id": 1742,
+                    "id": 1756,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -1098,15 +1098,15 @@
                       "typeString": "uint256"
                     }
                   },
-                  "functionReturnParameters": 1738,
-                  "id": 1743,
+                  "functionReturnParameters": 1752,
+                  "id": 1757,
                   "nodeType": "Return",
                   "src": "902:28:7"
                 }
               ]
             },
             "documentation": null,
-            "id": 1745,
+            "id": 1759,
             "implemented": true,
             "isConstructor": false,
             "isDeclaredConst": true,
@@ -1114,22 +1114,22 @@
             "name": "viewBalance",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 1735,
+              "id": 1749,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "862:2:7"
             },
             "payable": false,
             "returnParameters": {
-              "id": 1738,
+              "id": 1752,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1737,
+                  "id": 1751,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1745,
+                  "scope": 1759,
                   "src": "886:4:7",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1138,7 +1138,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 1736,
+                    "id": 1750,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
                     "src": "886:4:7",
@@ -1153,7 +1153,7 @@
               ],
               "src": "885:6:7"
             },
-            "scope": 1760,
+            "scope": 1774,
             "src": "842:95:7",
             "stateMutability": "view",
             "superFunction": null,
@@ -1161,7 +1161,7 @@
           },
           {
             "body": {
-              "id": 1758,
+              "id": 1772,
               "nodeType": "Block",
               "src": "971:74:7",
               "statements": [
@@ -1172,7 +1172,7 @@
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
                     },
-                    "id": 1751,
+                    "id": 1765,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -1181,18 +1181,18 @@
                       "argumentTypes": null,
                       "expression": {
                         "argumentTypes": null,
-                        "id": 1748,
+                        "id": 1762,
                         "name": "msg",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 2973,
+                        "referencedDeclaration": 2573,
                         "src": "985:3:7",
                         "typeDescriptions": {
                           "typeIdentifier": "t_magic_message",
                           "typeString": "msg"
                         }
                       },
-                      "id": 1749,
+                      "id": 1763,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -1211,7 +1211,7 @@
                     "rightExpression": {
                       "argumentTypes": null,
                       "hexValue": "30",
-                      "id": 1750,
+                      "id": 1764,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
@@ -1233,24 +1233,24 @@
                     }
                   },
                   "falseBody": null,
-                  "id": 1757,
+                  "id": 1771,
                   "nodeType": "IfStatement",
                   "src": "981:56:7",
                   "trueBody": {
                     "expression": {
                       "argumentTypes": null,
-                      "id": 1755,
+                      "id": 1769,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
                       "lValueRequested": false,
                       "leftHandSide": {
                         "argumentTypes": null,
-                        "id": 1752,
+                        "id": 1766,
                         "name": "lastDeposit",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1686,
+                        "referencedDeclaration": 1700,
                         "src": "1013:11:7",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
@@ -1263,18 +1263,18 @@
                         "argumentTypes": null,
                         "expression": {
                           "argumentTypes": null,
-                          "id": 1753,
+                          "id": 1767,
                           "name": "msg",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 2973,
+                          "referencedDeclaration": 2573,
                           "src": "1028:3:7",
                           "typeDescriptions": {
                             "typeIdentifier": "t_magic_message",
                             "typeString": "msg"
                           }
                         },
-                        "id": 1754,
+                        "id": 1768,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
@@ -1294,7 +1294,7 @@
                         "typeString": "uint256"
                       }
                     },
-                    "id": 1756,
+                    "id": 1770,
                     "nodeType": "ExpressionStatement",
                     "src": "1013:24:7"
                   }
@@ -1302,7 +1302,7 @@
               ]
             },
             "documentation": null,
-            "id": 1759,
+            "id": 1773,
             "implemented": true,
             "isConstructor": false,
             "isDeclaredConst": false,
@@ -1310,26 +1310,26 @@
             "name": "",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 1746,
+              "id": 1760,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "951:2:7"
             },
             "payable": true,
             "returnParameters": {
-              "id": 1747,
+              "id": 1761,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "971:0:7"
             },
-            "scope": 1760,
+            "scope": 1774,
             "src": "943:102:7",
             "stateMutability": "payable",
             "superFunction": null,
             "visibility": "external"
           }
         ],
-        "scope": 1761,
+        "scope": 1775,
         "src": "279:771:7"
       }
     ],
@@ -1339,17 +1339,17 @@
     "absolutePath": "/Users/antonvs/Projects/gnosis/ScamToken/contracts/tinkering/MountContract.sol",
     "exportedSymbols": {
       "MountContract": [
-        1760
+        1774
       ],
       "MountedContract": [
-        1682
+        1696
       ]
     },
-    "id": 1761,
+    "id": 1775,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 1660,
+        "id": 1674,
         "literals": [
           "solidity",
           "^",
@@ -1365,19 +1365,19 @@
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 1682,
+        "id": 1696,
         "linearizedBaseContracts": [
-          1682
+          1696
         ],
         "name": "MountedContract",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "constant": false,
-            "id": 1662,
+            "id": 1676,
             "name": "totalValue",
             "nodeType": "VariableDeclaration",
-            "scope": 1682,
+            "scope": 1696,
             "src": "56:25:7",
             "stateVariable": true,
             "storageLocation": "default",
@@ -1386,7 +1386,7 @@
               "typeString": "uint256"
             },
             "typeName": {
-              "id": 1661,
+              "id": 1675,
               "name": "uint256",
               "nodeType": "ElementaryTypeName",
               "src": "56:7:7",
@@ -1400,13 +1400,13 @@
           },
           {
             "body": {
-              "id": 1665,
+              "id": 1679,
               "nodeType": "Block",
               "src": "117:12:7",
               "statements": []
             },
             "documentation": null,
-            "id": 1666,
+            "id": 1680,
             "implemented": true,
             "isConstructor": true,
             "isDeclaredConst": false,
@@ -1414,19 +1414,19 @@
             "name": "",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 1663,
+              "id": 1677,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "99:2:7"
             },
             "payable": true,
             "returnParameters": {
-              "id": 1664,
+              "id": 1678,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "117:0:7"
             },
-            "scope": 1682,
+            "scope": 1696,
             "src": "88:41:7",
             "stateMutability": "payable",
             "superFunction": null,
@@ -1434,13 +1434,13 @@
           },
           {
             "body": {
-              "id": 1669,
+              "id": 1683,
               "nodeType": "Block",
               "src": "163:8:7",
               "statements": []
             },
             "documentation": null,
-            "id": 1670,
+            "id": 1684,
             "implemented": true,
             "isConstructor": false,
             "isDeclaredConst": false,
@@ -1448,19 +1448,19 @@
             "name": "",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 1667,
+              "id": 1681,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "143:2:7"
             },
             "payable": true,
             "returnParameters": {
-              "id": 1668,
+              "id": 1682,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "163:0:7"
             },
-            "scope": 1682,
+            "scope": 1696,
             "src": "135:36:7",
             "stateMutability": "payable",
             "superFunction": null,
@@ -1468,7 +1468,7 @@
           },
           {
             "body": {
-              "id": 1680,
+              "id": 1694,
               "nodeType": "Block",
               "src": "230:45:7",
               "statements": [
@@ -1480,14 +1480,14 @@
                       "arguments": [
                         {
                           "argumentTypes": null,
-                          "id": 1676,
+                          "id": 1690,
                           "name": "this",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 3016,
+                          "referencedDeclaration": 2616,
                           "src": "255:4:7",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_contract$_MountedContract_$1682",
+                            "typeIdentifier": "t_contract$_MountedContract_$1696",
                             "typeString": "contract MountedContract"
                           }
                         }
@@ -1495,11 +1495,11 @@
                       "expression": {
                         "argumentTypes": [
                           {
-                            "typeIdentifier": "t_contract$_MountedContract_$1682",
+                            "typeIdentifier": "t_contract$_MountedContract_$1696",
                             "typeString": "contract MountedContract"
                           }
                         ],
-                        "id": 1675,
+                        "id": 1689,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
@@ -1512,7 +1512,7 @@
                         },
                         "typeName": "address"
                       },
-                      "id": 1677,
+                      "id": 1691,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -1526,7 +1526,7 @@
                         "typeString": "address"
                       }
                     },
-                    "id": 1678,
+                    "id": 1692,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -1540,15 +1540,15 @@
                       "typeString": "uint256"
                     }
                   },
-                  "functionReturnParameters": 1674,
-                  "id": 1679,
+                  "functionReturnParameters": 1688,
+                  "id": 1693,
                   "nodeType": "Return",
                   "src": "240:28:7"
                 }
               ]
             },
             "documentation": null,
-            "id": 1681,
+            "id": 1695,
             "implemented": true,
             "isConstructor": false,
             "isDeclaredConst": true,
@@ -1556,22 +1556,22 @@
             "name": "getBalance",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 1671,
+              "id": 1685,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "200:2:7"
             },
             "payable": false,
             "returnParameters": {
-              "id": 1674,
+              "id": 1688,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1673,
+                  "id": 1687,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1681,
+                  "scope": 1695,
                   "src": "224:4:7",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1580,7 +1580,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 1672,
+                    "id": 1686,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
                     "src": "224:4:7",
@@ -1595,14 +1595,14 @@
               ],
               "src": "223:6:7"
             },
-            "scope": 1682,
+            "scope": 1696,
             "src": "181:94:7",
             "stateMutability": "view",
             "superFunction": null,
             "visibility": "public"
           }
         ],
-        "scope": 1761,
+        "scope": 1775,
         "src": "25:252:7"
       },
       {
@@ -1611,35 +1611,35 @@
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 1760,
+        "id": 1774,
         "linearizedBaseContracts": [
-          1760
+          1774
         ],
         "name": "MountContract",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "constant": false,
-            "id": 1684,
+            "id": 1698,
             "name": "mounted",
             "nodeType": "VariableDeclaration",
-            "scope": 1760,
+            "scope": 1774,
             "src": "308:30:7",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_contract$_MountedContract_$1682",
+              "typeIdentifier": "t_contract$_MountedContract_$1696",
               "typeString": "contract MountedContract"
             },
             "typeName": {
               "contractScope": null,
-              "id": 1683,
+              "id": 1697,
               "name": "MountedContract",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 1682,
+              "referencedDeclaration": 1696,
               "src": "308:15:7",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_MountedContract_$1682",
+                "typeIdentifier": "t_contract$_MountedContract_$1696",
                 "typeString": "contract MountedContract"
               }
             },
@@ -1648,10 +1648,10 @@
           },
           {
             "constant": false,
-            "id": 1686,
+            "id": 1700,
             "name": "lastDeposit",
             "nodeType": "VariableDeclaration",
-            "scope": 1760,
+            "scope": 1774,
             "src": "344:23:7",
             "stateVariable": true,
             "storageLocation": "default",
@@ -1660,7 +1660,7 @@
               "typeString": "uint256"
             },
             "typeName": {
-              "id": 1685,
+              "id": 1699,
               "name": "uint",
               "nodeType": "ElementaryTypeName",
               "src": "344:4:7",
@@ -1674,13 +1674,13 @@
           },
           {
             "body": {
-              "id": 1689,
+              "id": 1703,
               "nodeType": "Block",
               "src": "403:16:7",
               "statements": []
             },
             "documentation": null,
-            "id": 1690,
+            "id": 1704,
             "implemented": true,
             "isConstructor": true,
             "isDeclaredConst": false,
@@ -1688,19 +1688,19 @@
             "name": "",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 1687,
+              "id": 1701,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "385:2:7"
             },
             "payable": true,
             "returnParameters": {
-              "id": 1688,
+              "id": 1702,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "403:0:7"
             },
-            "scope": 1760,
+            "scope": 1774,
             "src": "374:45:7",
             "stateMutability": "payable",
             "superFunction": null,
@@ -1708,28 +1708,28 @@
           },
           {
             "body": {
-              "id": 1701,
+              "id": 1715,
               "nodeType": "Block",
               "src": "475:54:7",
               "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 1699,
+                    "id": 1713,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "argumentTypes": null,
-                      "id": 1695,
+                      "id": 1709,
                       "name": "mounted",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 1684,
+                      "referencedDeclaration": 1698,
                       "src": "485:7:7",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_contract$_MountedContract_$1682",
+                        "typeIdentifier": "t_contract$_MountedContract_$1696",
                         "typeString": "contract MountedContract"
                       }
                     },
@@ -1740,11 +1740,11 @@
                       "arguments": [
                         {
                           "argumentTypes": null,
-                          "id": 1697,
+                          "id": 1711,
                           "name": "_mountAddr",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 1692,
+                          "referencedDeclaration": 1706,
                           "src": "511:10:7",
                           "typeDescriptions": {
                             "typeIdentifier": "t_address",
@@ -1759,18 +1759,18 @@
                             "typeString": "address"
                           }
                         ],
-                        "id": 1696,
+                        "id": 1710,
                         "name": "MountedContract",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1682,
+                        "referencedDeclaration": 1696,
                         "src": "495:15:7",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_type$_t_contract$_MountedContract_$1682_$",
+                          "typeIdentifier": "t_type$_t_contract$_MountedContract_$1696_$",
                           "typeString": "type(contract MountedContract)"
                         }
                       },
-                      "id": 1698,
+                      "id": 1712,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -1780,24 +1780,24 @@
                       "nodeType": "FunctionCall",
                       "src": "495:27:7",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_contract$_MountedContract_$1682",
+                        "typeIdentifier": "t_contract$_MountedContract_$1696",
                         "typeString": "contract MountedContract"
                       }
                     },
                     "src": "485:37:7",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_MountedContract_$1682",
+                      "typeIdentifier": "t_contract$_MountedContract_$1696",
                       "typeString": "contract MountedContract"
                     }
                   },
-                  "id": 1700,
+                  "id": 1714,
                   "nodeType": "ExpressionStatement",
                   "src": "485:37:7"
                 }
               ]
             },
             "documentation": null,
-            "id": 1702,
+            "id": 1716,
             "implemented": true,
             "isConstructor": false,
             "isDeclaredConst": false,
@@ -1805,15 +1805,15 @@
             "name": "Mount",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 1693,
+              "id": 1707,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1692,
+                  "id": 1706,
                   "name": "_mountAddr",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1702,
+                  "scope": 1716,
                   "src": "440:18:7",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1822,7 +1822,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 1691,
+                    "id": 1705,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "440:7:7",
@@ -1839,12 +1839,12 @@
             },
             "payable": true,
             "returnParameters": {
-              "id": 1694,
+              "id": 1708,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "475:0:7"
             },
-            "scope": 1760,
+            "scope": 1774,
             "src": "425:104:7",
             "stateMutability": "payable",
             "superFunction": null,
@@ -1852,7 +1852,7 @@
           },
           {
             "body": {
-              "id": 1713,
+              "id": 1727,
               "nodeType": "Block",
               "src": "573:53:7",
               "statements": [
@@ -1864,18 +1864,18 @@
                         "argumentTypes": null,
                         "expression": {
                           "argumentTypes": null,
-                          "id": 1709,
+                          "id": 1723,
                           "name": "msg",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 2973,
+                          "referencedDeclaration": 2573,
                           "src": "609:3:7",
                           "typeDescriptions": {
                             "typeIdentifier": "t_magic_message",
                             "typeString": "msg"
                           }
                         },
-                        "id": 1710,
+                        "id": 1724,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
@@ -1902,14 +1902,14 @@
                         "arguments": [
                           {
                             "argumentTypes": null,
-                            "id": 1706,
+                            "id": 1720,
                             "name": "mounted",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 1684,
+                            "referencedDeclaration": 1698,
                             "src": "591:7:7",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_contract$_MountedContract_$1682",
+                              "typeIdentifier": "t_contract$_MountedContract_$1696",
                               "typeString": "contract MountedContract"
                             }
                           }
@@ -1917,11 +1917,11 @@
                         "expression": {
                           "argumentTypes": [
                             {
-                              "typeIdentifier": "t_contract$_MountedContract_$1682",
+                              "typeIdentifier": "t_contract$_MountedContract_$1696",
                               "typeString": "contract MountedContract"
                             }
                           ],
-                          "id": 1705,
+                          "id": 1719,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": true,
@@ -1934,7 +1934,7 @@
                           },
                           "typeName": "address"
                         },
-                        "id": 1707,
+                        "id": 1721,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
@@ -1948,7 +1948,7 @@
                           "typeString": "address"
                         }
                       },
-                      "id": 1708,
+                      "id": 1722,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -1962,7 +1962,7 @@
                         "typeString": "function (uint256)"
                       }
                     },
-                    "id": 1711,
+                    "id": 1725,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -1976,14 +1976,14 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 1712,
+                  "id": 1726,
                   "nodeType": "ExpressionStatement",
                   "src": "583:36:7"
                 }
               ]
             },
             "documentation": null,
-            "id": 1714,
+            "id": 1728,
             "implemented": true,
             "isConstructor": false,
             "isDeclaredConst": false,
@@ -1991,19 +1991,19 @@
             "name": "callMounted",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 1703,
+              "id": 1717,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "555:2:7"
             },
             "payable": true,
             "returnParameters": {
-              "id": 1704,
+              "id": 1718,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "573:0:7"
             },
-            "scope": 1760,
+            "scope": 1774,
             "src": "535:91:7",
             "stateMutability": "payable",
             "superFunction": null,
@@ -2011,7 +2011,7 @@
           },
           {
             "body": {
-              "id": 1723,
+              "id": 1737,
               "nodeType": "Block",
               "src": "692:40:7",
               "statements": [
@@ -2021,14 +2021,14 @@
                     "arguments": [
                       {
                         "argumentTypes": null,
-                        "id": 1720,
+                        "id": 1734,
                         "name": "mounted",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1684,
+                        "referencedDeclaration": 1698,
                         "src": "717:7:7",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_MountedContract_$1682",
+                          "typeIdentifier": "t_contract$_MountedContract_$1696",
                           "typeString": "contract MountedContract"
                         }
                       }
@@ -2036,11 +2036,11 @@
                     "expression": {
                       "argumentTypes": [
                         {
-                          "typeIdentifier": "t_contract$_MountedContract_$1682",
+                          "typeIdentifier": "t_contract$_MountedContract_$1696",
                           "typeString": "contract MountedContract"
                         }
                       ],
-                      "id": 1719,
+                      "id": 1733,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
@@ -2053,7 +2053,7 @@
                       },
                       "typeName": "address"
                     },
-                    "id": 1721,
+                    "id": 1735,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -2067,15 +2067,15 @@
                       "typeString": "address"
                     }
                   },
-                  "functionReturnParameters": 1718,
-                  "id": 1722,
+                  "functionReturnParameters": 1732,
+                  "id": 1736,
                   "nodeType": "Return",
                   "src": "702:23:7"
                 }
               ]
             },
             "documentation": null,
-            "id": 1724,
+            "id": 1738,
             "implemented": true,
             "isConstructor": false,
             "isDeclaredConst": true,
@@ -2083,22 +2083,22 @@
             "name": "addressMounted",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 1715,
+              "id": 1729,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "659:2:7"
             },
             "payable": false,
             "returnParameters": {
-              "id": 1718,
+              "id": 1732,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1717,
+                  "id": 1731,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1724,
+                  "scope": 1738,
                   "src": "683:7:7",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -2107,7 +2107,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 1716,
+                    "id": 1730,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "683:7:7",
@@ -2122,7 +2122,7 @@
               ],
               "src": "682:9:7"
             },
-            "scope": 1760,
+            "scope": 1774,
             "src": "636:96:7",
             "stateMutability": "view",
             "superFunction": null,
@@ -2130,7 +2130,7 @@
           },
           {
             "body": {
-              "id": 1733,
+              "id": 1747,
               "nodeType": "Block",
               "src": "795:37:7",
               "statements": [
@@ -2140,14 +2140,14 @@
                     "arguments": [
                       {
                         "argumentTypes": null,
-                        "id": 1730,
+                        "id": 1744,
                         "name": "this",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 3018,
+                        "referencedDeclaration": 2618,
                         "src": "820:4:7",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_MountContract_$1760",
+                          "typeIdentifier": "t_contract$_MountContract_$1774",
                           "typeString": "contract MountContract"
                         }
                       }
@@ -2155,11 +2155,11 @@
                     "expression": {
                       "argumentTypes": [
                         {
-                          "typeIdentifier": "t_contract$_MountContract_$1760",
+                          "typeIdentifier": "t_contract$_MountContract_$1774",
                           "typeString": "contract MountContract"
                         }
                       ],
-                      "id": 1729,
+                      "id": 1743,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
@@ -2172,7 +2172,7 @@
                       },
                       "typeName": "address"
                     },
-                    "id": 1731,
+                    "id": 1745,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -2186,15 +2186,15 @@
                       "typeString": "address"
                     }
                   },
-                  "functionReturnParameters": 1728,
-                  "id": 1732,
+                  "functionReturnParameters": 1742,
+                  "id": 1746,
                   "nodeType": "Return",
                   "src": "805:20:7"
                 }
               ]
             },
             "documentation": null,
-            "id": 1734,
+            "id": 1748,
             "implemented": true,
             "isConstructor": false,
             "isDeclaredConst": true,
@@ -2202,22 +2202,22 @@
             "name": "viewAddress",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 1725,
+              "id": 1739,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "762:2:7"
             },
             "payable": false,
             "returnParameters": {
-              "id": 1728,
+              "id": 1742,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1727,
+                  "id": 1741,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1734,
+                  "scope": 1748,
                   "src": "786:7:7",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -2226,7 +2226,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 1726,
+                    "id": 1740,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "786:7:7",
@@ -2241,7 +2241,7 @@
               ],
               "src": "785:9:7"
             },
-            "scope": 1760,
+            "scope": 1774,
             "src": "742:90:7",
             "stateMutability": "view",
             "superFunction": null,
@@ -2249,7 +2249,7 @@
           },
           {
             "body": {
-              "id": 1744,
+              "id": 1758,
               "nodeType": "Block",
               "src": "892:45:7",
               "statements": [
@@ -2261,14 +2261,14 @@
                       "arguments": [
                         {
                           "argumentTypes": null,
-                          "id": 1740,
+                          "id": 1754,
                           "name": "this",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 3018,
+                          "referencedDeclaration": 2618,
                           "src": "917:4:7",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_contract$_MountContract_$1760",
+                            "typeIdentifier": "t_contract$_MountContract_$1774",
                             "typeString": "contract MountContract"
                           }
                         }
@@ -2276,11 +2276,11 @@
                       "expression": {
                         "argumentTypes": [
                           {
-                            "typeIdentifier": "t_contract$_MountContract_$1760",
+                            "typeIdentifier": "t_contract$_MountContract_$1774",
                             "typeString": "contract MountContract"
                           }
                         ],
-                        "id": 1739,
+                        "id": 1753,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
@@ -2293,7 +2293,7 @@
                         },
                         "typeName": "address"
                       },
-                      "id": 1741,
+                      "id": 1755,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -2307,7 +2307,7 @@
                         "typeString": "address"
                       }
                     },
-                    "id": 1742,
+                    "id": 1756,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -2321,15 +2321,15 @@
                       "typeString": "uint256"
                     }
                   },
-                  "functionReturnParameters": 1738,
-                  "id": 1743,
+                  "functionReturnParameters": 1752,
+                  "id": 1757,
                   "nodeType": "Return",
                   "src": "902:28:7"
                 }
               ]
             },
             "documentation": null,
-            "id": 1745,
+            "id": 1759,
             "implemented": true,
             "isConstructor": false,
             "isDeclaredConst": true,
@@ -2337,22 +2337,22 @@
             "name": "viewBalance",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 1735,
+              "id": 1749,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "862:2:7"
             },
             "payable": false,
             "returnParameters": {
-              "id": 1738,
+              "id": 1752,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1737,
+                  "id": 1751,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1745,
+                  "scope": 1759,
                   "src": "886:4:7",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -2361,7 +2361,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 1736,
+                    "id": 1750,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
                     "src": "886:4:7",
@@ -2376,7 +2376,7 @@
               ],
               "src": "885:6:7"
             },
-            "scope": 1760,
+            "scope": 1774,
             "src": "842:95:7",
             "stateMutability": "view",
             "superFunction": null,
@@ -2384,7 +2384,7 @@
           },
           {
             "body": {
-              "id": 1758,
+              "id": 1772,
               "nodeType": "Block",
               "src": "971:74:7",
               "statements": [
@@ -2395,7 +2395,7 @@
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
                     },
-                    "id": 1751,
+                    "id": 1765,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -2404,18 +2404,18 @@
                       "argumentTypes": null,
                       "expression": {
                         "argumentTypes": null,
-                        "id": 1748,
+                        "id": 1762,
                         "name": "msg",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 2973,
+                        "referencedDeclaration": 2573,
                         "src": "985:3:7",
                         "typeDescriptions": {
                           "typeIdentifier": "t_magic_message",
                           "typeString": "msg"
                         }
                       },
-                      "id": 1749,
+                      "id": 1763,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -2434,7 +2434,7 @@
                     "rightExpression": {
                       "argumentTypes": null,
                       "hexValue": "30",
-                      "id": 1750,
+                      "id": 1764,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
@@ -2456,24 +2456,24 @@
                     }
                   },
                   "falseBody": null,
-                  "id": 1757,
+                  "id": 1771,
                   "nodeType": "IfStatement",
                   "src": "981:56:7",
                   "trueBody": {
                     "expression": {
                       "argumentTypes": null,
-                      "id": 1755,
+                      "id": 1769,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
                       "lValueRequested": false,
                       "leftHandSide": {
                         "argumentTypes": null,
-                        "id": 1752,
+                        "id": 1766,
                         "name": "lastDeposit",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1686,
+                        "referencedDeclaration": 1700,
                         "src": "1013:11:7",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
@@ -2486,18 +2486,18 @@
                         "argumentTypes": null,
                         "expression": {
                           "argumentTypes": null,
-                          "id": 1753,
+                          "id": 1767,
                           "name": "msg",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 2973,
+                          "referencedDeclaration": 2573,
                           "src": "1028:3:7",
                           "typeDescriptions": {
                             "typeIdentifier": "t_magic_message",
                             "typeString": "msg"
                           }
                         },
-                        "id": 1754,
+                        "id": 1768,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
@@ -2517,7 +2517,7 @@
                         "typeString": "uint256"
                       }
                     },
-                    "id": 1756,
+                    "id": 1770,
                     "nodeType": "ExpressionStatement",
                     "src": "1013:24:7"
                   }
@@ -2525,7 +2525,7 @@
               ]
             },
             "documentation": null,
-            "id": 1759,
+            "id": 1773,
             "implemented": true,
             "isConstructor": false,
             "isDeclaredConst": false,
@@ -2533,26 +2533,26 @@
             "name": "",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 1746,
+              "id": 1760,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "951:2:7"
             },
             "payable": true,
             "returnParameters": {
-              "id": 1747,
+              "id": 1761,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "971:0:7"
             },
-            "scope": 1760,
+            "scope": 1774,
             "src": "943:102:7",
             "stateMutability": "payable",
             "superFunction": null,
             "visibility": "external"
           }
         ],
-        "scope": 1761,
+        "scope": 1775,
         "src": "279:771:7"
       }
     ],
@@ -2563,6 +2563,6 @@
     "version": "0.4.24+commit.e67f0147.Emscripten.clang"
   },
   "networks": {},
-  "schemaVersion": "2.0.0",
-  "updatedAt": "2018-07-07T10:03:24.894Z"
+  "schemaVersion": "2.0.1",
+  "updatedAt": "2018-07-10T01:26:26.027Z"
 }

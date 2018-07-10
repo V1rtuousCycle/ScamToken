@@ -24,10 +24,9 @@ contract Crowdfunding {
     
     function purchase(uint _amount) public returns(bool) {
         require(active, "The auction is over. Great job, avoiding this trap took intuition.");
- 
         if (weth.transferFrom(msg.sender, address(this), _amount)) {
-            if (totalWeiRaised + _amount >= 3 ether) {
-                uint256 excessFunds = totalWeiRaised + _amount - 3 ether;
+            if (totalWeiRaised + _amount >= 1000 ether) {
+                uint256 excessFunds = totalWeiRaised + _amount - 1000 ether;
                 weth.approve(msg.sender, excessFunds);
                 weth.transfer(msg.sender, excessFunds);
                 totalWeiRaised += _amount - excessFunds;
