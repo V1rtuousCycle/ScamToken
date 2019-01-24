@@ -41,8 +41,8 @@
       "type": "function"
     }
   ],
-  "bytecode": "0x608060405260ec806100126000396000f3006080604052600436106049576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff16806312065fe014604b578063d4c3eea0146073575b005b348015605657600080fd5b50605d609b565b6040518082815260200191505060405180910390f35b348015607e57600080fd5b50608560ba565b6040518082815260200191505060405180910390f35b60003073ffffffffffffffffffffffffffffffffffffffff1631905090565b600054815600a165627a7a72305820befdec23b7adac9de1f47d1e426d465765bf6ad834dcf90a919c953a92313c4d0029",
-  "deployedBytecode": "0x6080604052600436106049576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff16806312065fe014604b578063d4c3eea0146073575b005b348015605657600080fd5b50605d609b565b6040518082815260200191505060405180910390f35b348015607e57600080fd5b50608560ba565b6040518082815260200191505060405180910390f35b60003073ffffffffffffffffffffffffffffffffffffffff1631905090565b600054815600a165627a7a72305820befdec23b7adac9de1f47d1e426d465765bf6ad834dcf90a919c953a92313c4d0029",
+  "bytecode": "0x608060405260ec806100126000396000f3006080604052600436106049576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff16806312065fe014604b578063d4c3eea0146073575b005b348015605657600080fd5b50605d609b565b6040518082815260200191505060405180910390f35b348015607e57600080fd5b50608560ba565b6040518082815260200191505060405180910390f35b60003073ffffffffffffffffffffffffffffffffffffffff1631905090565b600054815600a165627a7a72305820df44f242fa09b769f1d94e3ed6c5522df862a0548525d80fee8b5742c40cda110029",
+  "deployedBytecode": "0x6080604052600436106049576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff16806312065fe014604b578063d4c3eea0146073575b005b348015605657600080fd5b50605d609b565b6040518082815260200191505060405180910390f35b348015607e57600080fd5b50608560ba565b6040518082815260200191505060405180910390f35b60003073ffffffffffffffffffffffffffffffffffffffff1631905090565b600054815600a165627a7a72305820df44f242fa09b769f1d94e3ed6c5522df862a0548525d80fee8b5742c40cda110029",
   "sourceMap": "25:252:7:-;;;;;;;;;",
   "deployedSourceMap": "25:252:7:-;;;;;;;;;;;;;;;;;;;;;;;;;;;181:94;;8:9:-1;5:2;;;30:1;27;20:12;5:2;181:94:7;;;;;;;;;;;;;;;;;;;;;;;56:25;;8:9:-1;5:2;;;30:1;27;20:12;5:2;56:25:7;;;;;;;;;;;;;;;;;;;;;;;181:94;224:4;255;247:21;;;240:28;;181:94;:::o;56:25::-;;;;:::o",
   "source": "pragma solidity ^0.4.4;\n\ncontract MountedContract {\n    uint256 public totalValue;\n\n    constructor() public payable {\n    \n    }\n\n    function() external payable {\n\n    }\n    \n    function getBalance() public view returns (uint) {\n        return address(this).balance;\n    }\n}\n\ncontract MountContract {\n    MountedContract public mounted;\n    uint public lastDeposit;\n\n    constructor() public payable {\n        \n    }\n\n    function Mount(address _mountAddr) payable public {\n        mounted = MountedContract(_mountAddr);\n    }\n\n    function callMounted() public payable {\n        address(mounted).transfer(msg.value);\n    }\n    \n    function addressMounted() public view returns (address) {\n        return address(mounted);\n    }\n    \n    function viewAddress() public view returns (address) {\n        return address(this);\n    }\n    \n    function viewBalance() public view returns (uint) {\n        return address(this).balance;\n    }\n\n    function() external payable {\n        if (msg.value > 0) \n            lastDeposit =  msg.value; \n    }\n\n\n\n}",
@@ -196,7 +196,7 @@
                           "name": "this",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 2616,
+                          "referencedDeclaration": 2626,
                           "src": "255:4:7",
                           "typeDescriptions": {
                             "typeIdentifier": "t_contract$_MountedContract_$1696",
@@ -580,7 +580,7 @@
                           "name": "msg",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 2573,
+                          "referencedDeclaration": 2583,
                           "src": "609:3:7",
                           "typeDescriptions": {
                             "typeIdentifier": "t_magic_message",
@@ -856,7 +856,7 @@
                         "name": "this",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 2618,
+                        "referencedDeclaration": 2628,
                         "src": "820:4:7",
                         "typeDescriptions": {
                           "typeIdentifier": "t_contract$_MountContract_$1774",
@@ -977,7 +977,7 @@
                           "name": "this",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 2618,
+                          "referencedDeclaration": 2628,
                           "src": "917:4:7",
                           "typeDescriptions": {
                             "typeIdentifier": "t_contract$_MountContract_$1774",
@@ -1120,7 +1120,7 @@
                         "name": "msg",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 2573,
+                        "referencedDeclaration": 2583,
                         "src": "985:3:7",
                         "typeDescriptions": {
                           "typeIdentifier": "t_magic_message",
@@ -1202,7 +1202,7 @@
                           "name": "msg",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 2573,
+                          "referencedDeclaration": 2583,
                           "src": "1028:3:7",
                           "typeDescriptions": {
                             "typeIdentifier": "t_magic_message",
@@ -1419,7 +1419,7 @@
                           "name": "this",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 2616,
+                          "referencedDeclaration": 2626,
                           "src": "255:4:7",
                           "typeDescriptions": {
                             "typeIdentifier": "t_contract$_MountedContract_$1696",
@@ -1803,7 +1803,7 @@
                           "name": "msg",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 2573,
+                          "referencedDeclaration": 2583,
                           "src": "609:3:7",
                           "typeDescriptions": {
                             "typeIdentifier": "t_magic_message",
@@ -2079,7 +2079,7 @@
                         "name": "this",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 2618,
+                        "referencedDeclaration": 2628,
                         "src": "820:4:7",
                         "typeDescriptions": {
                           "typeIdentifier": "t_contract$_MountContract_$1774",
@@ -2200,7 +2200,7 @@
                           "name": "this",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 2618,
+                          "referencedDeclaration": 2628,
                           "src": "917:4:7",
                           "typeDescriptions": {
                             "typeIdentifier": "t_contract$_MountContract_$1774",
@@ -2343,7 +2343,7 @@
                         "name": "msg",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 2573,
+                        "referencedDeclaration": 2583,
                         "src": "985:3:7",
                         "typeDescriptions": {
                           "typeIdentifier": "t_magic_message",
@@ -2425,7 +2425,7 @@
                           "name": "msg",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 2573,
+                          "referencedDeclaration": 2583,
                           "src": "1028:3:7",
                           "typeDescriptions": {
                             "typeIdentifier": "t_magic_message",
@@ -2495,9 +2495,9 @@
   },
   "compiler": {
     "name": "solc",
-    "version": "0.4.24+commit.e67f0147.Emscripten.clang"
+    "version": "0.4.25+commit.59dbf8f1.Emscripten.clang"
   },
   "networks": {},
-  "schemaVersion": "2.0.1",
-  "updatedAt": "2018-07-10T01:26:26.027Z"
+  "schemaVersion": "2.0.2",
+  "updatedAt": "2019-01-24T04:49:03.813Z"
 }

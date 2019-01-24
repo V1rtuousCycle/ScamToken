@@ -27,8 +27,8 @@
       "type": "constructor"
     }
   ],
-  "bytecode": "0x608060405234801561001057600080fd5b506040516020806100e7833981018060405281019080805190602001909291905050508060008190555050609e806100496000396000f300608060405260043610603f576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff168063a4d66daf146044575b600080fd5b348015604f57600080fd5b506056606c565b6040518082815260200191505060405180910390f35b600054815600a165627a7a723058208a9ee72dfdf0439631b6385fd14775fc3939960ae6cc0e33cc66bdb2fd1725d20029",
-  "deployedBytecode": "0x608060405260043610603f576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff168063a4d66daf146044575b600080fd5b348015604f57600080fd5b506056606c565b6040518082815260200191505060405180910390f35b600054815600a165627a7a723058208a9ee72dfdf0439631b6385fd14775fc3939960ae6cc0e33cc66bdb2fd1725d20029",
+  "bytecode": "0x608060405234801561001057600080fd5b506040516020806100e7833981018060405281019080805190602001909291905050508060008190555050609e806100496000396000f300608060405260043610603f576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff168063a4d66daf146044575b600080fd5b348015604f57600080fd5b506056606c565b6040518082815260200191505060405180910390f35b600054815600a165627a7a72305820f7fdbee3afd88760ba46f0722f008e4cf82b2c968e80f73f734805bcfa3444e30029",
+  "deployedBytecode": "0x608060405260043610603f576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff168063a4d66daf146044575b600080fd5b348015604f57600080fd5b506056606c565b6040518082815260200191505060405180910390f35b600054815600a165627a7a72305820f7fdbee3afd88760ba46f0722f008e4cf82b2c968e80f73f734805bcfa3444e30029",
   "sourceMap": "345:400:9:-;;;521:60;8:9:-1;5:2;;;30:1;27;20:12;5:2;521:60:9;;;;;;;;;;;;;;;;;;;;;;;;;;;;;570:6;562:5;:14;;;;521:60;345:400;;;;;;",
   "deployedSourceMap": "345:400:9:-;;;;;;;;;;;;;;;;;;;;;;;;372:20;;8:9:-1;5:2;;;30:1;27;20:12;5:2;372:20:9;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o",
   "source": "pragma solidity ^0.4.23;\n\n\n/**\n * @title LimitBalance\n * @dev Simple contract to limit the balance of child contract.\n * @dev Note this doesn't prevent other contracts to send funds by using selfdestruct(address);\n * @dev See: https://github.com/ConsenSys/smart-contract-best-practices#remember-that-ether-can-be-forcibly-sent-to-an-account\n */\ncontract LimitBalance {\n\n  uint256 public limit;\n\n  /**\n   * @dev Constructor that sets the passed value as a limit.\n   * @param _limit uint256 to represent the limit.\n   */\n  constructor(uint256 _limit) public {\n    limit = _limit;\n  }\n\n  /**\n   * @dev Checks if limit was reached. Case true, it throws.\n   */\n  modifier limitedPayable() {\n    require(address(this).balance <= limit);\n    _;\n\n  }\n\n}\n",
@@ -233,7 +233,7 @@
                                 "name": "this",
                                 "nodeType": "Identifier",
                                 "overloadedDeclarations": [],
-                                "referencedDeclaration": 2612,
+                                "referencedDeclaration": 2622,
                                 "src": "706:4:9",
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_contract$_LimitBalance_$2046",
@@ -322,10 +322,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        2576,
-                        2577
+                        2586,
+                        2587
                       ],
-                      "referencedDeclaration": 2576,
+                      "referencedDeclaration": 2586,
                       "src": "690:7:9",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
@@ -577,7 +577,7 @@
                                 "name": "this",
                                 "nodeType": "Identifier",
                                 "overloadedDeclarations": [],
-                                "referencedDeclaration": 2612,
+                                "referencedDeclaration": 2622,
                                 "src": "706:4:9",
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_contract$_LimitBalance_$2046",
@@ -666,10 +666,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        2576,
-                        2577
+                        2586,
+                        2587
                       ],
-                      "referencedDeclaration": 2576,
+                      "referencedDeclaration": 2586,
                       "src": "690:7:9",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
@@ -723,9 +723,9 @@
   },
   "compiler": {
     "name": "solc",
-    "version": "0.4.24+commit.e67f0147.Emscripten.clang"
+    "version": "0.4.25+commit.59dbf8f1.Emscripten.clang"
   },
   "networks": {},
-  "schemaVersion": "2.0.1",
-  "updatedAt": "2018-07-10T01:26:26.029Z"
+  "schemaVersion": "2.0.2",
+  "updatedAt": "2019-01-24T04:49:03.813Z"
 }

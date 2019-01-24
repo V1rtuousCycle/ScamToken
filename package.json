@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "devDependencies": {
+    "@gnosis.pm/truffle-nice-tools": "^1.2.3",
     "autoprefixer": "6.5.1",
     "babel-core": "6.17.0",
     "babel-eslint": "7.1.1",
@@ -45,6 +46,7 @@
     "truffle-contract": "^1.1.11",
     "url-loader": "0.5.7",
     "webpack": "1.14.0",
+    "truffle": "^4.1.15",
     "webpack-dev-server": "1.16.2",
     "webpack-manifest-plugin": "1.1.0",
     "whatwg-fetch": "1.0.0"

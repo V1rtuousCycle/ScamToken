@@ -21,7 +21,7 @@ module.exports = (deployer, network, accounts) => {
           );
         });
     });
-  } else if (network == "ganache") {
+  } else if (network == "ganache" || network == "test") {
     deployer.deploy(WETH9).then(weth9Instance => {
       return deployer.deploy(ScamToken).then(instance => {
         var scmTokenInstance = instance;

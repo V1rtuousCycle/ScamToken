@@ -2,6 +2,10 @@ var ScamToken = artifacts.require("ScamToken");
 var Crowdfunding = artifacts.require("Crowdfunding");
 var WETH9 = artifacts.require("WETH9");
 
+const contracts = [ScamToken, Crowdfunding, WETH9];
+
+const testGas = require("@gnosis.pm/truffle-nice-tools").testGas;
+
 contract("ScamToken", function(accounts) {
   var scamToken;
   var crowdfunding;
@@ -9,13 +13,23 @@ contract("ScamToken", function(accounts) {
   before(async () => {
     scamToken = await ScamToken.deployed();
     crowdfunding = await Crowdfunding.deployed();
+    
   });
+  
+  before(testGas.createGasStatCollectorBeforeHook(contracts));
+  after(testGas.createGasStatCollectorAfterHook(contracts));
 
   it("Should have a balance of 10^21 Scam Tokens initially.", async () => {
     var balance = await scamToken.balanceOf.call(crowdfunding.address);
     balance = balance.toString(10);
     assert.equal(balance, 1e21);
   });
+
+  it("User should have a balance of 0 Scam Tokens initially", async () => {
+    var userBalance = await scamToken.balanceOf(accounts[0]);
+    userBalance = userBalance.toString(10);
+    assert.equal(userBalance, 0);
+  })
 
   it("Should have a total supply of 10^21 Scam Tokens.", async () => {
     var totalSupply = await scamToken.totalSupply();
@@ -46,11 +60,15 @@ contract("Crowdfunding", function(accounts) {
   var crowdfunding;
   var weth9;
 
-  beforeEach(async () => {
+  before(async () => {
     weth9 = await WETH9.deployed();
     scamToken = await ScamToken.deployed();
     crowdfunding = await Crowdfunding.deployed();
+
+    testGas.createGasStatCollectorBeforeHook(contracts);
   });
+
+  after(testGas.createGasStatCollectorAfterHook(contracts));
 
   it("Should start accounts with a balance of 0 Wrapped Ether", async () => {
     var startingBalance = await weth9.balanceOf(accounts[1]);
@@ -87,13 +105,17 @@ contract("Crowdfunding", function(accounts) {
     // console.log('total balance for account', totalAccountBalance);
   });
 
+  it("Crowdfunding should start off being set to active.", async () => {
+    const crowdfundingActiveVariable = await crowdfunding.active();
+    assert.equal(crowdfundingActiveVariable, true);
+  })
+
   it("Should not be able to withdraw until the auction is over and the timeout has passed", async () => {
     const active = await crowdfunding.active();
-    console.log(active);
     if (active == true) {
       try {
         var withdraw = await crowdfunding.withdraw({
-            from: accounts[0]
+          from: accounts[0]
         });
       } catch (err) {
         assert(true);
