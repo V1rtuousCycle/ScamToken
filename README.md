@@ -1,8 +1,5 @@
 # ScamToken
-A token sale raising Wrapped Ether for SCM token. Implementing an ERC20 interface for the SCM token via the ScamToken.sol contract, and holding a Crowdsale (ICO) event via the Crowdfunding.sol contract. A React interface is built  
-
-## Note
-The EthPM registry was down when I was creating this project (Jan 23rd, 2019). So, I was not able to include a package from it. (Although I have many times in the past, we have tried using it as Gnosis, and it didn't work out,as libraries could dissapear due to IPFS not having Proof-of-Replication implemented yet.) Screenshots to verify that EthPM was down are included in the root folder of this project 
+A token sale web app that's raising Ether for SCM token. Implementing an ERC20 interface for the SCM token via the ScamToken.sol contract, and holding a Crowdsale (ICO) event via the Crowdfunding.sol contract.  
 
 ## How to interact
 Run `npm run start` and buy some WETH tokens from the already deployed contracts hosted on the Rinkeby network. _The app should automatically start on localhost:3000._
