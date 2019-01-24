@@ -1,11 +1,17 @@
+require('dotenv').config();
+
+var HDWalletProvider = require("truffle-hdwallet-provider");
+
+const seed = process.env.SEED || 'witch collapse practice feed shame open despair creek road again ice least' 
+
+
 module.exports = {
   networks: {
     rinkeby: {
-      host: '127.0.0.1',
-      port: 8545,
-      from: '0x486156834261013e9a4f417c9f637fa983ea4026', // input your address
-      network_id: "4",
-      gas: 4000000,  // Gas limit used for deploys  
+      provider: () => {
+       return new HDWalletProvider(seed, "https://rinkeby.infura.io/v3/22218302c99b4ee29f8a5876ad0b552c"); 
+      }, 
+      network_id: "4"
     },
     ganache: {
       host: '127.0.0.1',

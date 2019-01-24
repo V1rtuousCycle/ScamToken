@@ -99,7 +99,7 @@ contract("Crowdfunding", function(accounts) {
     await crowdfunding.purchase(100, {
       from: accounts[2]
     });
-    var balance = await crowdfunding.balances(accounts[2]);
+    var balance = await crowdfunding.balances(accounts[2]).then(balance => balance.toString());
     assert.equal(balance, 100);
     // const totalAccountBalance = await crowdfunding.balances(accounts[1]);
     // console.log('total balance for account', totalAccountBalance);
